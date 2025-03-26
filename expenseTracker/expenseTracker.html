@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Vitals Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #4caf50;
+            font-size: 2rem;
+        }
+
+        h3 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        .result {
+            font-weight: bold;
+            color: #4caf50;
+        }
+
+        .excellent {
+            color: #007bff;
+        }
+
+        .good {
+            color: #4caf50;
+        }
+
+        .poor {
+            color: #ff5722;
+        }
+
+        .screenshot-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .screenshot-container img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .note {
+            font-style: italic;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Web Vitals Report</h1>
+        <p class="note">
+            Report based on metrics data collected from the
+            <strong><a href="https://www.npmjs.com/package/web-vitals">web-vitals</a></strong>
+            library.
+        </p>
+        <hr>
+        <strong>
+            <p>
+                Threshholds used:
+                <a href="https://web.dev/articles/defining-core-web-vitals-thresholds">Official reference</a>
+            </p>
+        </strong>
+        <p>
+            This Report is for
+            <a href="https://github.com/immortalWebDev/Rapid-Compiler">Rapid Compiler Website</a> (Desktop-first website)
+        </p>
+
+        <h3>Core Web Vitals</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Metric</th>
+                    <th>Value</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Largest Contentful Paint (LCP)</strong></td>
+                    <td>567.2 ms</td>
+                    <td class="result good">Good (≤ 2500 ms)</td>
+                </tr>
+                <tr>
+                    <td><strong>Interaction to Next Paint (INP)</strong></td>
+                    <td>88 ms</td>
+                    <td class="result good">Good (≤ 200 ms)</td>
+                </tr>
+                <tr>
+                    <td><strong>Cumulative Layout Shift (CLS)</strong></td>
+                    <td>2.00e-7</td>
+                    <td class="result excellent">Excellent (≤ 0.1)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Other Metrics</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Metric</th>
+                    <th>Value</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>First Contentful Paint (FCP)</strong></td>
+                    <td>567.2 ms</td>
+                    <td class="result good">Good (≤ 2500 ms)</td>
+                </tr>
+                <tr>
+                    <td><strong>Time to First Byte (TTFB)</strong></td>
+                    <td>7.8 ms</td>
+                    <td class="result excellent">Excellent (≤ 100 ms)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="screenshot-container">
+            <p><strong>Screenshot:</strong></p>
+            <img src="https://cdn.jsdelivr.net/gh/immortalWebDev/my-cdn@f400561297bbf98e20f26bf7b6a81c70bc8d656c/expense-tracker/expense-google-lighthouse.jpg" alt="Web Vitals Screenshot" />
+        </div>
+    </div>
+</body>
+
+</html>
